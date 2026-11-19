@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <title>1-Mustaqil ta'lim loyihasi</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6f9; text-align: center; padding: 50px; }
+        .card { background: white; max-width: 500px; margin: auto; padding: 30px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        h1 { color: #2c3e50; }
+        .status { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>1-Mustaqil ta'lim loyihasi</h1>
+        <p><b>Mavzu:</b> Lokal dasturni bulutli infratuzilmaga joylashtirish</p>
+        <p class="status">Holati: Dastur bulutli serverda (GitHub Pages) muvaffaqiyatli ishlamoqda!</p>
+        <p id="env"></p>
+    </div>
+
+    <script>
+        const host = window.location.hostname;
+        const muhit = (host === "" || host === "localhost" || host === "127.0.0.1") 
+            ? "Lokal kompyuter (Localhost / File)" 
+            : "Bulutli infratuzilma (" + host + ")";
+        document.getElementById("env").innerHTML = "<b>Joriy muhit:</b> " + muhit;
+    </script>
+</body>
+</html>
 
